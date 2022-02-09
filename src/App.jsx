@@ -1,3 +1,10 @@
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
 import { Header } from "./componentes/header";
 import { Main } from "./componentes/main";
 import { Footer } from "./componentes/footer";
@@ -8,15 +15,25 @@ import { Contactanos } from "./componentes/paginas/contactanos";
 
 export function App() {
   return (
-    <div className="wrapper">
-      <h1>holas</h1>
-      <Header />
-      <Main>
-        <VendeAqui />
-        <Registrate />
-        <Contactanos />
-      </Main>
-      <Footer />
-    </div>
+    <Router>
+      <div className="wrapper">
+        <h1>holas</h1>
+        <Header />
+        <Main>
+          <Switch>
+            <Route path="/vende-aqui">
+              <VendeAqui />
+            </Route>
+            <Route path="/registrate">
+              <Registrate />
+            </Route>
+            <Route path="/contactanos">
+              <Contactanos />
+            </Route>
+          </Switch>
+        </Main>
+        <Footer />
+      </div>
+    </Router>
   );
 }

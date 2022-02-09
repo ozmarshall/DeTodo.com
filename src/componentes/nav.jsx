@@ -1,15 +1,17 @@
+import { Link } from "react-router-dom";
+
 export function Nav() {
   return (
-    <nav  className="nav">
+    <nav className="nav">
       <ul>
         <li>
-          <a href="#">Vende Aqui</a>
+          <Link to="/vende-aqui">Vende Aqui</Link>
         </li>
         <li>
-          <a href="#">Registrate</a>
+        <Link to="/registrate">Registrate</Link>
         </li>
         <li>
-          <a href="#">Contactanos</a>
+        <Link to="/contactanos">Contactanos</Link>
         </li>
       </ul>
     </nav>

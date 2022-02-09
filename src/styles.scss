@@ -132,7 +132,7 @@ table {
 
 body {
   font-family: arial;
-  color: #ccc;
+  color: red;
 }
 
 h1 {
@@ -180,8 +180,9 @@ nav {
 
 /*main*/
 .mainM {
-  background: #000;
+  background: #ccc;
   flex-grow: 1;
+  color: blue;
 }
 
 /*footer*/
