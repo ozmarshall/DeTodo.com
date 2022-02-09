@@ -9,10 +9,10 @@ import { Header } from "./componentes/header";
 import { Main } from "./componentes/main";
 import { Footer } from "./componentes/footer";
 
-import { VendeAqui } from "./componentes/paginas/vende-aqui";
-import { Registrate } from "./componentes/paginas/registrate";
-import { Contactanos } from "./componentes/paginas/contactanos";
-import { PageNotFound } from "./componentes/paginas/not-found";
+import { VendeAqui } from "./paginas/vende-aqui";
+import { Registrate } from "./paginas/registrate";
+import { Contactanos } from "./paginas/contactanos";
+import { PageNotFound } from "./paginas/not-found";
 
 export function App() {
   return (
