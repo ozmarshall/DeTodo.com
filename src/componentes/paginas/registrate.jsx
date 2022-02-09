@@ -1,4 +1,3 @@
-
 export function Registrate() {
   return (
     <div className="pagina_registrate">
@@ -6,4 +5,3 @@ export function Registrate() {
     </div>
   );
 }
-

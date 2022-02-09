@@ -8,10 +8,10 @@ export function Nav() {
           <Link to="/vende-aqui">Vende Aqui</Link>
         </li>
         <li>
-        <Link to="/registrate">Registrate</Link>
+          <Link to="/registrate">Registrate</Link>
         </li>
         <li>
-        <Link to="/contactanos">Contactanos</Link>
+          <Link to="/contactanos">Contactanos</Link>
         </li>
       </ul>
     </nav>
