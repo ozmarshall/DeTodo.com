@@ -1,7 +1,7 @@
 export function PageNotFound() {
     return (
       <div className="no-encontrado">
-        <p>PAGINA NO ENCONTRADO</p>
+        <p>PAGINA NO ENCONTRADA</p>
       </div>
     );
   }

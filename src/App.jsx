@@ -31,7 +31,6 @@ export function App() {
             <Route path="/contactanos">
               <Contactanos />
             </Route>
-
             <Redirect exact from="/" to="/vende-aqui" />
             <Route path="*">
               <PageNotFound />
