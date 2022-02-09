@@ -2,7 +2,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
+  Redirect,
 } from "react-router-dom";
 
 import { Header } from "./componentes/header";
@@ -12,6 +12,7 @@ import { Footer } from "./componentes/footer";
 import { VendeAqui } from "./componentes/paginas/vende-aqui";
 import { Registrate } from "./componentes/paginas/registrate";
 import { Contactanos } from "./componentes/paginas/contactanos";
+import { PageNotFound } from "./componentes/paginas/not-found";
 
 export function App() {
   return (
@@ -29,6 +30,11 @@ export function App() {
             </Route>
             <Route path="/contactanos">
               <Contactanos />
+            </Route>
+
+            <Redirect exact from="/" to="/vende-aqui" />
+            <Route path="*">
+              <PageNotFound />
             </Route>
           </Switch>
         </Main>
