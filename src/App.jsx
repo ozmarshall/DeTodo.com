@@ -12,13 +12,13 @@ import { Footer } from "./componentes/footer";
 import { VendeAqui } from "./paginas/vende-aqui";
 import { Registrate } from "./paginas/registrate";
 import { Contactanos } from "./paginas/contactanos";
+import { MiPerfil } from "./paginas/mi-perfil";
 import { PageNotFound } from "./paginas/not-found";
 
 export function App() {
   return (
     <Router>
       <div className="wrapper">
-        <h1>holas</h1>
         <Header />
         <Main>
           <Switch>
@@ -30,6 +30,9 @@ export function App() {
             </Route>
             <Route path="/contactanos">
               <Contactanos />
+            </Route>
+            <Route path="/mi-perfil">
+              <MiPerfil />
             </Route>
             <Redirect exact from="/" to="/vende-aqui" />
             <Route path="*">

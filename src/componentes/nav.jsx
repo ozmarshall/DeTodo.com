@@ -13,6 +13,9 @@ export function Nav() {
         <li>
           <Link to="/contactanos">Contactanos</Link>
         </li>
+        <li>
+          <Link to="/mi-perfil">Mi Perfil</Link>
+        </li>
       </ul>
     </nav>
   );
