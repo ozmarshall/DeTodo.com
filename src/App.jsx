@@ -5,15 +5,18 @@ import {
   Redirect,
 } from "react-router-dom";
 
-import { Header } from "./componentes/header";
+import { Header } from "./componentes/header/header";
 import { Main } from "./componentes/main";
 import { Footer } from "./componentes/footer";
 
 import { VendeAqui } from "./paginas/vende-aqui";
+import { Login } from "./paginas/login";
 import { Registrate } from "./paginas/registrate";
 import { Contactanos } from "./paginas/contactanos";
 import { MiPerfil } from "./paginas/mi-perfil";
 import { PageNotFound } from "./paginas/not-found";
+import "antd/dist/antd.css";
+import "./styles.scss";
 
 export function App() {
   return (
@@ -24,6 +27,9 @@ export function App() {
           <Switch>
             <Route path="/vende-aqui">
               <VendeAqui />
+            </Route>
+            <Route path="/login">
+              <Login />
             </Route>
             <Route path="/registrate">
               <Registrate />

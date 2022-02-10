@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -159,14 +162,6 @@ a {
   height: 100vh;
 }
 
-/*header*/
-.headerH {
-  background: #892da9;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 nav {
   ul {
     display: flex;
@@ -189,4 +184,9 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.ant-btn-primary {
+  background: #892da9!important;
+  border-color: #892da9!important;
 }

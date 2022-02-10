@@ -1,0 +1,9 @@
+/*header*/
+.headerH {
+  background: #892da9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @apply p-6;
+}
