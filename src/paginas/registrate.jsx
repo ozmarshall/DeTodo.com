@@ -6,6 +6,10 @@ export function Registrate() {
       <form className="w-80 mx-auto text-center">
         <Input placeholder="Usuario" className="w-full mb-8" />
         <Input type="password" placeholder="Password" className="w-full mb-8" />
+        <Input type="password" placeholder="Password" className="w-full mb-8" />
+        <Input type="password" placeholder="Password" className="w-full mb-8" />
+        <Input type="password" placeholder="Password" className="w-full mb-8" />
+        <Input type="password" placeholder="Password" className="w-full mb-8" />
         <button className="p-4 bg-primary rounded">REGISTRARSE</button>
       </form>
     </div>

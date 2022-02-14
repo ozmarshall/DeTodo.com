@@ -162,31 +162,4 @@ a {
   height: 100vh;
 }
 
-nav {
-  ul {
-    display: flex;
-    justify-content: space-between;
-  }
 
-  li {
-    padding: 10px;
-  }
-}
-
-/*main*/
-.mainM {
-  flex-grow: 1;
-}
-
-/*footer*/
-.footerF {
-  background: #892da9;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.ant-btn-primary {
-  background: #892da9!important;
-  border-color: #892da9!important;
-}

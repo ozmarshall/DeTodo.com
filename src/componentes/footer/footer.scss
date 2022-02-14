@@ -1,0 +1,28 @@
+/*footer*/
+.footer_1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.aviso {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  
+}
+
+.footer_2 {
+  background: #892da9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*
+  .ant-btn-primary {
+    background: #892da9!important;
+    border-color: #892da9!important;
+  }*/
