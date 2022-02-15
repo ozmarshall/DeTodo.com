@@ -9,11 +9,13 @@ import { Header } from "./componentes/header/header";
 import { Main } from "./componentes/main/main";
 import { Footer } from "./componentes/footer/footer";
 
+import { PagePrincipal } from "./paginas/pagina-principal";
+import { MiPerfil } from "./paginas/mi-perfil";
 import { VendeAqui } from "./paginas/vende-aqui";
 import { Login } from "./paginas/login";
 import { Registrate } from "./paginas/registrate";
 import { Contactanos } from "./paginas/contactanos";
-import { MiPerfil } from "./paginas/mi-perfil";
+import { Carrito } from "./paginas/carrito";
 import { PageNotFound } from "./paginas/not-found";
 //import "antd/dist/antd.css";
 import "./styles.scss";
@@ -25,6 +27,12 @@ export function App() {
         <Header />
         <Main>
           <Switch>
+          <Route path="/pagina-principal">
+              <PagePrincipal />
+            </Route>
+            <Route path="/mi-perfil">
+              <MiPerfil />
+            </Route>
             <Route path="/vende-aqui">
               <VendeAqui />
             </Route>
@@ -37,10 +45,10 @@ export function App() {
             <Route path="/contactanos">
               <Contactanos />
             </Route>
-            <Route path="/mi-perfil">
-              <MiPerfil />
+            <Route path="/carrito">
+              <Carrito />
             </Route>
-            <Redirect exact from="/" to="/vende-aqui" />
+            <Redirect exact from="/" to="/pagina-principal" />
             <Route path="*">
               <PageNotFound />
             </Route>
