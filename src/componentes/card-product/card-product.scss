@@ -1,0 +1,17 @@
+.card-product {
+  &__heart {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+    svg {
+      stroke: #ef5da8;
+      stroke-width: 100px;
+      fill: white;
+
+      &:hover {
+        fill: #ef5da8;
+      }
+    }
+  }
+}
