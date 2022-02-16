@@ -35,10 +35,10 @@ export function Contactanos() {
               className="w-full mb-8"
             />
             <textarea
-              className="text-gray-900  border border-gray-400 rounded-2xl focus:outline-none focus:border-gray-900 "
+              className="text-gray-900  border border-gray-400 rounded-2xl focus:outline-none focus:border-gray-900 text-center text-inherit mb-10"
               name=""
               id=""
-              cols="35"
+              cols="40"
               rows="10"
             >
               Ingresa tu Mensaje

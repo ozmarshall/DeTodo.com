@@ -16,6 +16,7 @@ import { Login } from "./paginas/login";
 import { Registrate } from "./paginas/registrate";
 import { Contactanos } from "./paginas/contactanos/contactanos";
 import { Carrito } from "./paginas/carrito";
+import { PagePoliticas } from "./paginas/politicas/politicas";
 import { PageNotFound } from "./paginas/not-found";
 //import "antd/dist/antd.css";
 import "./styles.scss";
@@ -47,6 +48,9 @@ export function App() {
             </Route>
             <Route path="/carrito">
               <Carrito />
+            </Route>
+            <Route path="/politicas">
+              <PagePoliticas />
             </Route>
             <Redirect exact from="/" to="/pagina-principal" />
             <Route path="*">
