@@ -13,7 +13,7 @@ import { PagePrincipal } from "./paginas/pagina-principal";
 import { MiPerfil } from "./paginas/mi-perfil";
 import { VendeAqui } from "./paginas/vende-aqui";
 import { Login } from "./paginas/login";
-import { Registrate } from "./paginas/registrate";
+import { Registrate } from "./paginas/registrate/registrate";
 import { Contactanos } from "./paginas/contactanos/contactanos";
 import { Carrito } from "./paginas/carrito";
 import { PagePoliticas } from "./paginas/politicas/politicas";
