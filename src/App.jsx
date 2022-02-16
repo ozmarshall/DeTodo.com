@@ -27,7 +27,7 @@ export function App() {
         <Header />
         <Main>
           <Switch>
-          <Route path="/pagina-principal">
+            <Route path="/pagina-principal">
               <PagePrincipal />
             </Route>
             <Route path="/mi-perfil">

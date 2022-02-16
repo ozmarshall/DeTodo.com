@@ -1,4 +1,4 @@
-import banner_styles from "../../ui/banners/banner_styles";
+import banner_styles from "../ui/banners/banner_styles";
 
 export function Contactanos() {
   return (

@@ -3,7 +3,7 @@ import iconos_styles from "../../ui/iconos/iconos_styles";
 
 export function Footer() {
   return (
-    <footer className="footerF">
+    <footer className="footerF text-white">
       <hr className="py-4 " />
       <section className="footer_1">
         <div>
@@ -31,20 +31,20 @@ export function Footer() {
               <img className="px-5" src={iconos_styles.img2} alt="" />
             </a>
             <a href="https://twitter.com/">
-              <img className="px-5"  src={iconos_styles.img4} alt="" />
+              <img className="px-5" src={iconos_styles.img4} alt="" />
             </a>
             <a href="https://instagram.com/">
-              <img className="px-5"  src={iconos_styles.img5} alt="" />
+              <img className="px-5" src={iconos_styles.img5} alt="" />
             </a>
           </div>
         </div>
       </section>
       <section className="footer_2 p-8">
         <h2>
-          Compra y vende en<a href="#"> DeTodo.com</a> y disfruta
+          Compra y vende en<a href="#"> deTodo.com</a> y disfruta
         </h2>
         <p>
-          Avisos Clasificados. @ 2010-2022 <a href="">DeTodo.com</a>{" "}
+          Avisos Clasificados. @ 2010-2022 <a href="">deTodo.com</a>{" "}
         </p>
       </section>
     </footer>

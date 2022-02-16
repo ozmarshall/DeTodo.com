@@ -8,13 +8,12 @@ import icono_profile from "../iconos/icono_profile.png";
 import icono_shoppingCart from "../iconos/icono_shoppingCart.png";
 
 export default {
-    //"img1" : icono_instagram,
-    "img2" : icono_Facebook,
-    "img3" : icono_check,
-    "img4" : icono_Twitter,
-    "img5" : icono_photo,
-    "img6" : icono_shield,
-    "img7" : icono_profile,
-    "img8" : icono_shoppingCart,
-
-}
+  //"img1" : icono_instagram,
+  img2: icono_Facebook,
+  img3: icono_check,
+  img4: icono_Twitter,
+  img5: icono_photo,
+  img6: icono_shield,
+  img7: icono_profile,
+  img8: icono_shoppingCart,
+};
