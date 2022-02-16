@@ -12,7 +12,7 @@ export function Nav() {
           <Link to="/mi-perfil"><img src={iconos_styles.img7} alt="" /></Link>
         </li>
         <li>
-          <Link to="/vende-aqui">Vende Aqui</Link>
+          <Link to="/vende-aqui">Vender</Link>
         </li>
         <li>
           <Link to="/registrate">Registrate</Link>

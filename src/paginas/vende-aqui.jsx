@@ -1,10 +1,7 @@
 export function VendeAqui() {
   return (
     <div className="pagina_vende_aqui">
-      <p>aqui el contenido vende aqui</p>
-      <div>
-        <img src="https://picsum.photos/seed/picsum/200/300" alt="" />
-      </div>
+      <p>CONTENIDO VENDE AQUI</p>
     </div>
   );
 }

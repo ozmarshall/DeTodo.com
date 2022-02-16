@@ -1,13 +1,16 @@
+import { useHistory } from "react-router-dom";
 import "./footer.scss";
 import iconos_styles from "../../ui/iconos/iconos_styles";
 
 export function Footer() {
+  let history = useHistory();
+  
   return (
     <footer className="footerF">
       <hr className="py-4 " />
       <section className="footer_1">
-        <div>
-          <a href="#">
+        <div >
+          <a href="#" className="" onClick={() => {history.push("/politicas");}}>
             <h2>Aviso Legal</h2>
             <div className="aviso">
               <img src={iconos_styles.img5} alt="" />
