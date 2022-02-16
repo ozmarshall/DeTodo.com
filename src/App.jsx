@@ -14,7 +14,7 @@ import { MiPerfil } from "./paginas/mi-perfil";
 import { VendeAqui } from "./paginas/vende-aqui";
 import { Login } from "./paginas/login";
 import { Registrate } from "./paginas/registrate";
-import { Contactanos } from "./paginas/contactanos";
+import { Contactanos } from "./paginas/contactanos/contactanos";
 import { Carrito } from "./paginas/carrito";
 import { PageNotFound } from "./paginas/not-found";
 //import "antd/dist/antd.css";
