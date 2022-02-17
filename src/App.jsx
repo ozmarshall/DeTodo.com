@@ -11,7 +11,7 @@ import { Footer } from "./componentes/footer/footer";
 
 import { PagePrincipal } from "./paginas/pagina-principal";
 import { MiPerfil } from "./paginas/mi-perfil";
-import { VendeAqui } from "./paginas/vende-aqui";
+import { VendeAqui } from "./paginas/vende_aqui/vende-aqui";
 import { Login } from "./paginas/login";
 import { Registrate } from "./paginas/registrate/registrate";
 import { Contactanos } from "./paginas/contactanos/contactanos";

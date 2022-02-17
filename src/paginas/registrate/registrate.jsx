@@ -7,7 +7,7 @@ import "./registrate.scss";
 export function Registrate() {
   return (
     <div className="page-register text-center max-w-screen-lg mx-auto">
-      <h1 className="mb-8">REGISTRATE</h1>
+      <h1 className="mb-8 text-slate-400">REGISTRATE</h1>
       <form className="formulario w-4/5 mx-auto text-center">
         <div>
           <Uploadimage className="w-80 h-80"></Uploadimage>
