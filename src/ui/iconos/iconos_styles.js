@@ -9,7 +9,6 @@ import icono_shoppingCart from "../iconos/icono_shoppingCart.png";
 
 
 export default {
-<<<<<<< HEAD
     //"img1" : icono_instagram,
     "img2" : icono_Facebook,
     "img3" : icono_check,
@@ -21,14 +20,3 @@ export default {
     
 
 }
-=======
-  //"img1" : icono_instagram,
-  img2: icono_Facebook,
-  img3: icono_check,
-  img4: icono_Twitter,
-  img5: icono_photo,
-  img6: icono_shield,
-  img7: icono_profile,
-  img8: icono_shoppingCart,
-};
->>>>>>> 46ea94b7c7f0a2e777337ad3a56f54d77ec7df7f

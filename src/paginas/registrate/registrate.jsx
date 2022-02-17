@@ -12,6 +12,9 @@ export function Registrate() {
         <div>
           <Uploadimage className="w-96 h-96"></Uploadimage>
         </div>
+        <br />
+        <br />
+
         <div>
           <Input placeholder="Apellido" className="w-full mb-8" />
           <Input type="number" placeholder="Telefono" className="w-full mb-8" />
