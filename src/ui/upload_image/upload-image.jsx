@@ -18,8 +18,8 @@ export function Uploadimage(props) {
         onChange(event);
       }}
     >
-      <input type="file" />
-      <img className="w-80 h-80 object-cover mx-auto" src={refUrlImage} alt="" />
+      <input type="file"  />
+      <img className=" object-cover mx-auto" src={refUrlImage} alt="" />
     </label>
   );
 }

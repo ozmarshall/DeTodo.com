@@ -67,7 +67,7 @@ export function PagePoliticas() {
         nuestros servicios de conformidad con nuestros “Términos y Condiciones”.
       </p>
 
-      <div className="text-center">
+      <div className="text-center text-slate-100">
         <button
           onClick={() => {
             console.log("click!!!");
