@@ -5,12 +5,11 @@ import banner_styles from "../../ui/banners/banner_styles";
 export function Contactanos() {
   return (
     <div className="pagina_contacto">
-      <p>CONTACTANOS :</p>
       <section>
         <img src={banner_styles.img10} alt="" className="w-2/3 mx-auto" />
       </section>
       <div className="contactanosC">
-        <section>
+        <section className="text-slate-400">
           <h2>Contactanos:</h2>
           <p>Pais: Perú</p>
           <p>Departamento: Lima</p>
@@ -21,7 +20,7 @@ export function Contactanos() {
         </section>
         <section>
           <form
-            className="w-80 mx-auto text-center"
+            className="w-3/4 mx-auto text-center"
             onSubmit={(event) => {
               event.preventDefault();
               console.log("submit!!!!");
@@ -35,10 +34,9 @@ export function Contactanos() {
               className="w-full mb-8"
             />
             <textarea
-              className="text-gray-900  border border-gray-400 rounded-2xl focus:outline-none focus:border-gray-900 text-center text-inherit mb-10"
+              className="text-gray-900 w-full resize-none outline-none border border-gray-400 rounded-2xl focus:outline-none focus:border-gray-900 text-center text-inherit mb-10"
               name=""
               id=""
-              cols="40"
               rows="10"
             >
               Ingresa tu Mensaje
@@ -48,7 +46,7 @@ export function Contactanos() {
               onClick={() => {
                 console.log("click!!!");
               }}
-              className="p-4 bg-primary rounded w-40"
+              className="p-4 bg-primary rounded w-40 text-slate-100"
             >
               ENVIAR
             </button>

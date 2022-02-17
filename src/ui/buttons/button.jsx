@@ -3,7 +3,7 @@ export function Button(props) {
 
   return (
     <button
-      className={`p-4 bg-primary rounded ${className}`}
+      className={`p-4 bg-primary rounded  text-slate-100 ${className}`}
       onChange={onChange}
     >
       {children}
