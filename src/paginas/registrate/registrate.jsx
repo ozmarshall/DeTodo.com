@@ -13,6 +13,7 @@ export function Registrate() {
           <Uploadimage className="w-80 h-80"></Uploadimage>
         </div>
         <div>
+          <Input placeholder="Nombre" className="w-full mb-8" />
           <Input placeholder="Apellido" className="w-full mb-8" />
           <Input type="number" placeholder="Telefono" className="w-full mb-8" />
           <Input
@@ -32,10 +33,8 @@ export function Registrate() {
             className="w-full mb-8"
           />
         </div>
-        <div className="area_text resize-none outline-none ">
-          <AreaText  rows="10">
-            Cuentanos sobre ti ..
-          </AreaText>
+        <div className="area_texto resize-none outline-none ">
+          <AreaText rows="10">Cuentanos sobre ti ..</AreaText>
         </div>
         <div className="col-span-2">
           <Button>GUARDAR</Button>
