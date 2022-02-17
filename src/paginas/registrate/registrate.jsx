@@ -32,7 +32,9 @@ export function Registrate() {
             Cuentanos sobre ti ..
           </AreaText>
         </div>
-        <Button>GUARDAR</Button>
+        <div className="col-span-2">
+          <Button>GUARDAR</Button>
+        </div>
       </form>
     </div>
   );
