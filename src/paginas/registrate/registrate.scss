@@ -2,3 +2,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
+
+.page-register .area_text {
+    grid-column: 1/3;
+}
