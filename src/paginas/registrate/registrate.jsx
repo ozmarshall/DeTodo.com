@@ -6,29 +6,34 @@ import "./registrate.scss";
 
 export function Registrate() {
   return (
-    <div className="page-register text-center">
+    <div className="page-register text-center max-w-screen-lg mx-auto">
       <h1 className="mb-8">REGISTRATE</h1>
       <form className="formulario w-4/5 mx-auto text-center">
         <div>
-          <Uploadimage className="w-96 h-96"></Uploadimage>
+          <Uploadimage className="w-80 h-80 "></Uploadimage>
         </div>
         <div>
-          <Input placeholder="Apellido" className="w-3/4 mb-8" />
-          <Input type="number" placeholder="Telefono" className="w-3/4 mb-8" />
+          <Input placeholder="Apellido" className="w-full mb-8" />
+          <Input type="number" placeholder="Telefono" className="w-full mb-8" />
           <Input
             type="number"
             placeholder="Documento de Identidad"
-            className="w-3/4 mb-8"
+            className="w-full mb-8"
           />
-          <Input type="email" placeholder="E-mail" className="w-3/4 mb-8" />
+          <Input type="email" placeholder="E-mail" className="w-full mb-8" />
           <Input
             type="password"
             placeholder="Password"
-            className="w-3/4 mb-8"
+            className="w-full mb-8"
+          />
+          <Input
+            type="password"
+            placeholder="Confirme Password"
+            className="w-full mb-8"
           />
         </div>
-        <div className="area_text">
-          <AreaText cols="110" rows="10">
+        <div className="area_text resize-none outline-none ">
+          <AreaText  rows="10">
             Cuentanos sobre ti ..
           </AreaText>
         </div>

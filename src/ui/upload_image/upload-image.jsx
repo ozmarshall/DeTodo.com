@@ -19,7 +19,7 @@ export function Uploadimage(props) {
       }}
     >
       <input type="file" />
-      <img className="w-full h-full object-cover" src={refUrlImage} alt="" />
+      <img className="w-40 h-40 object-cover mx-auto" src={refUrlImage} alt="" />
     </label>
   );
 }
