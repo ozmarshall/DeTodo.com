@@ -10,14 +10,7 @@ export function PagePrincipal() {
       title: "TITULO DE PRODUCTO",
       brand: "Sony",
     },
-    {
-      id: 1,
-      image:
-        "https://http2.mlstatic.com/D_Q_NP_974377-MPE47679042385_092021-AB.webp",
-      price: "S/. 200.00",
-      title: "TITULO DE PRODUCTO",
-      brand: "Sony",
-    },
+   
   ];
 
   return (
