@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+import axios from "axios";
 import { CardProduct } from "componentes/card-product/card-product";
 
 export function PagePrincipal() {
@@ -19,6 +21,23 @@ export function PagePrincipal() {
       brand: "Sony",
     },
   ];
+  const [articulos, setArticulos] = useState([]);
+
+  function getProducts() {
+    axios
+      .get("https://61ef3d66d593d20017dbb3ad.mockapi.io/articulos")
+      .then((respuesta) => {
+        console.log("respuesta", respuesta.data);
+        setArticulos(respuesta.data);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  }
+
+  useEffect(() => {
+    getProducts();
+  }, []);
 
   return (
     <div className="pagina_mi_perfil">
@@ -28,8 +47,12 @@ export function PagePrincipal() {
         </span>
       </h1>
       <div className="grid grid-cols-4 gap-8">
-        {products.map((product) => (
-          <CardProduct {...product} />
+        {articulos.map((product) => (
+          <CardProduct
+            image={product.image}
+            price={product.price}
+            title={product.tittle}
+          />
         ))}
       </div>
     </div>
