@@ -10,7 +10,7 @@ export function Registrate() {
       <h1 className="mb-8 text-slate-400">REGISTRATE</h1>
       <form className="formulario w-4/5 mx-auto text-center">
         <div>
-          <Uploadimage className="w-80 h-80 "></Uploadimage>
+          <Uploadimage className="label_registrate w-80 h-80 "></Uploadimage>
         </div>
         <div>
           <Input placeholder="Nombre" className="w-full mb-8" />
