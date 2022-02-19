@@ -47,7 +47,7 @@ export function PagePrincipal() {
   //codigo para poder subir a la pagina principal desde el servidor
 
   return (
-    <div className="pagina_mi_perfil">
+    <div className="">
       <h1 className="mt-4 mb-10">
         <span className="inline-block pl-4 border-l-8 border-solid border-primary font-bold">
           Bienvenidos a tu tienda favorita
