@@ -4,25 +4,11 @@ import {
   MailOutlined,
 } from "@ant-design/icons";
 
-import axios from "axios";
-import { useEffect, useState } from "react";
+
 import "./card-product.scss";
 
 export function CardProduct(props) {
   const { image, price, title, brand } = props;
-
-  //defino un estado inicial con una array vacio-001
-  const [datos_Api, setdatos_Api] = useState([]);
-  //esto me da el estado inicial del componente, luego ejecutamos axios con la ruta-002
-  useEffect(() => {
-    console.log("esto se ejecuta");
-    axios
-      .get("https://61ef3d66d593d20017dbb3ad.mockapi.io/articulos")
-      .then((respuesta) => {
-        setdatos_Api(respuesta.data);//seteo el estado inicialque defini al componente con los datos de la respuesta-003
-      });
-  }, []);
-
   return (
     <article className="card-product relative cursor-pointer text-black border border-solid rounded-xl border-gray-400 hover:shadow-xl">
       <HeartFilled

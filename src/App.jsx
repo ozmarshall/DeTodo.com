@@ -12,6 +12,7 @@ import { Footer } from "./componentes/footer/footer";
 import { PagePrincipal } from "./paginas/pagina-principal";
 import { MiPerfil } from "./paginas/mi-perfil";
 import { VendeAqui } from "./paginas/vende_aqui/vende-aqui";
+import { Detalle } from "./paginas/detalle/detalle";
 import { Login } from "./paginas/login";
 import { Registrate } from "./paginas/registrate/registrate";
 import { Contactanos } from "./paginas/contactanos/contactanos";
@@ -36,6 +37,9 @@ export function App() {
             </Route>
             <Route path="/vende-aqui">
               <VendeAqui />
+            </Route>
+            <Route path="/detalle">
+              <Detalle />
             </Route>
             <Route path="/login">
               <Login />

@@ -3,6 +3,7 @@ import axios from "axios";
 import { CardProduct } from "componentes/card-product/card-product";
 
 export function PagePrincipal() {
+  //codigo para poder subir a la pagina principal no desde el servidor
   const products = [
     {
       id: 1,
@@ -12,8 +13,20 @@ export function PagePrincipal() {
       title: "TITULO DE PRODUCTO",
       brand: "Sony",
     },
-   
+    {
+      id: 1,
+      image:
+        "https://http2.mlstatic.com/D_Q_NP_974377-MPE47679042385_092021-AB.webp",
+      price: "S/. 200.00",
+      title: "TITULO DE PRODUCTO",
+      brand: "Sony",
+    },
   ];
+  //codigo para poder subir a la pagina principal no desde el servidor
+
+  //////////////////////////////////////////////////////////////////////////////////////////
+
+  //codigo para poder subir a la pagina principal desde el servidor
   const [articulos, setArticulos] = useState([]);
 
   function getProducts() {
@@ -31,6 +44,7 @@ export function PagePrincipal() {
   useEffect(() => {
     getProducts();
   }, []);
+  //codigo para poder subir a la pagina principal desde el servidor
 
   return (
     <div className="pagina_mi_perfil">
