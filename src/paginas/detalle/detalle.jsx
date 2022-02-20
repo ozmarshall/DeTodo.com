@@ -1,4 +1,3 @@
-import { useHistory } from "react-router-dom";
 import { Button } from "ui/buttons/button";
 import iconos_styles from "../../ui/iconos/iconos_styles";
 import "./detalle.scss";

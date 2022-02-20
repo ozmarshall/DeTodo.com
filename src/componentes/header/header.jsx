@@ -1,16 +1,15 @@
-import { useHistory } from "react-router-dom";
-import { Link } from "react-router-dom";
 
+import { NavLink } from "react-router-dom";
 import { Input } from "ui/input/input";
 import { Nav } from "../nav/nav";
 import "./header.scss";
 
 export function Header() {
-  let history = useHistory();
+  
   return (
     <header className="headerH text-white">
       <h1>
-        <Link to="/">deTodo.com</Link>
+        <NavLink to="/pagina-principal" activeClassName="is-active">deTodo.com</NavLink>
       </h1>
       <Input
         placeholder="Autos, Accesorios, restaurantes y mucho más..."

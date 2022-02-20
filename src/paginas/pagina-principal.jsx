@@ -53,7 +53,7 @@ export function PagePrincipal() {
           Bienvenidos a tu tienda favorita
         </span>
       </h1>
-      <div className="grid grid-cols-4 gap-8">
+      <div className="grid grid-cols-4 gap-8 w-5/6 mx-auto">
         {articulos.map((product) => (
           <CardProduct
             image={product.image}

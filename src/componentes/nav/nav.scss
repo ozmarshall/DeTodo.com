@@ -9,3 +9,9 @@ nav {
     padding: 10px;
   }
 }
+
+.nav a :hover, .is-active{
+  color: #f0abfc;
+  font-weight: bold;
+
+}

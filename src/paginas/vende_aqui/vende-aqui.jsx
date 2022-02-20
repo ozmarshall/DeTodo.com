@@ -1,5 +1,5 @@
 import { useState } from "react";
-import  axios  from "axios";
+import axios from "axios";
 import { useHistory } from "react-router-dom";
 import { AreaText } from "ui/areaText/area-text";
 import { Input } from "ui/input/input";
@@ -17,24 +17,28 @@ export function VendeAqui() {
   });
 
   function saveContato() {
-    axios.post("https://61ef3d66d593d20017dbb3ad.mockapi.io/articulos",form)
-  .then(()=>{
-    alert("la informacion se guardo correctamente")
-    history.push("/pagina-principal");
-  }).catch(()=>{
-    alert("la informacion no se guardo correctamente, intentalo otra vez")
-  })}
-
-
+    axios
+      .post("https://61ef3d66d593d20017dbb3ad.mockapi.io/articulos", form)
+      .then(() => {
+        alert("la informacion se guardo correctamente");
+        history.push("/detalle");
+      })
+      .catch(() => {
+        alert("la informacion no se guardo correctamente, intentalo otra vez");
+      });
+  }
 
   return (
     <div className="pagina_vende_aqui max-w-screen-xl mx-auto my-10">
-      <form onSubmit={(event)=>{
-       event.preventDefault()
-       saveContato()
-      //console.log("Esto se enviara al backend", form)
-      }} >
+      <form
+        onSubmit={(event) => {
+          event.preventDefault();
+          saveContato();
+          //console.log("Esto se enviara al backend", form)
+        }}
+      >
         <div className="imagenes_venta grid gap-x-8 gap-y-4 grid-cols-3 pb-20">
+          
           <Uploadimage
             className="labelL w-48 h-48"
             value={form.image}
@@ -42,10 +46,10 @@ export function VendeAqui() {
               //console.log(event.target.value);
               //const copyObjet={...form, image: event.target.value}
               //console.log("copyObjet", copyObjet)
-              setForm((state) => ({ ...state, image: event.target.value }))
+              setForm((state) => ({ ...state, image: event.target.value }));
             }}
           ></Uploadimage>
-          <Uploadimage className="labelL w-48 h-48" ></Uploadimage>
+          <Uploadimage className="labelL w-48 h-48"></Uploadimage>
           <Uploadimage className="labelL w-48 h-48"></Uploadimage>
           <Uploadimage className="labelL w-48 h-48"></Uploadimage>
           <Uploadimage className="labelL w-48 h-48"></Uploadimage>
@@ -61,7 +65,7 @@ export function VendeAqui() {
               value={form.price}
               onChange={(event) => {
                 console.log(event.target.value);
-                setForm((state) => ({ ...state, price: event.target.value }))
+                setForm((state) => ({ ...state, price: event.target.value }));
               }}
             />
             <Input
@@ -71,7 +75,7 @@ export function VendeAqui() {
               value={form.tittle}
               onChange={(event) => {
                 console.log(event.target.value);
-                setForm((state) => ({ ...state, tittle: event.target.value }))
+                setForm((state) => ({ ...state, tittle: event.target.value }));
               }}
             />
           </div>

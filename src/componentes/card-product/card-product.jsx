@@ -15,7 +15,7 @@ export function CardProduct(props) {
       href="#"
       className=""
       onClick={() => {
-        history.push("/detalle");
+        history.push("/detalle/");
       }}
     >
       <article className="card-product relative cursor-pointer text-black border border-solid rounded-xl border-gray-400 hover:shadow-xl">

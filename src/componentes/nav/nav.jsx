@@ -2,26 +2,26 @@ import iconos_styles from "../../ui/iconos/iconos_styles";
 import "./nav.scss";
 
 
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export function Nav() {
   return (
     <nav className="nav">
       <ul>
       <li>
-          <Link to="/mi-perfil"><img src={iconos_styles.img7} alt="" /></Link>
+          <NavLink to="/mi-perfil" activeClassName="is-active"><img src={iconos_styles.img7} alt="" /></NavLink>
         </li>
         <li>
-          <Link to="/vende-aqui">Vender</Link>
+          <NavLink to="/vende-aqui" activeClassName="is-active">Vender</NavLink>
         </li>
         <li>
-          <Link to="/registrate">Registrate</Link>
+          <NavLink to="/registrate" activeClassName="is-active">Registrate</NavLink>
         </li>
         <li>
-          <Link to="/contactanos">Contactanos</Link>
+          <NavLink to="/contactanos" activeClassName="is-active">Contactanos</NavLink>
         </li>
         <li>
-          <Link to="/carrito"><img src={iconos_styles.img8} alt="" /></Link>
+          <NavLink to="/carrito" activeClassName="is-active"><img src={iconos_styles.img8} alt="" /></NavLink>
         </li>
       </ul>
     </nav>
