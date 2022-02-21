@@ -11,7 +11,7 @@ export function MiPerfil() {
         <div className="contenedor_imagen_perfil w-80 h-80 mx-auto">
          
         </div>
-        <div className="mx-auto w-64">
+        <div className="mx-auto w-64 text-slate-500">
           <p>Nombre :</p>
           <p>Apellido :</p>
           <p>Edad :</p>
@@ -31,7 +31,7 @@ export function MiPerfil() {
             </div>
           </div>
         </div>
-        <div className="descripcion_sobreMi mx-auto" >
+        <div className="descripcion_sobreMi mx-auto text-slate-500" >
           <p className="w-3/4 mx-auto py-10">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat
             nostrum veniam enim, possimus doloribus natus reprehenderit, nulla

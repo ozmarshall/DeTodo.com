@@ -12,8 +12,9 @@ export function Login() {
           console.log("submit!!!!");
         }}
       >
-        <Input placeholder="Usuario" className="w-full mb-8" />
+        <Input placeholder="Usuario / alias" className="w-full mb-8" />
         <Input type="password" placeholder="Password" className="w-full mb-8" />
+        <Input type="password" placeholder="Comfirme Password" className="w-full mb-8" />
         <Button
           htmlType="submit"
           type="primary"

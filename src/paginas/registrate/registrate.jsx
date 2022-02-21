@@ -27,7 +27,7 @@ export function Registrate() {
       .post("https://61ef3d66d593d20017dbb3ad.mockapi.io/registrados", registr)
       .then(() => {
         alert("la informacion se guardo correctamente");
-        history.push("/mi-perfil");
+        history.push("/login");
       })
       .catch(() => {
         alert("la informacion no se guardo correctamente, intentalo otra vez");
@@ -77,6 +77,18 @@ export function Registrate() {
               setRegistr((state) => ({
                 ...state,
                 lastName: event.target.value,
+              }));
+            }}
+          />
+            <Input
+            placeholder="Escoja un Nombre de Usuario o alias"
+            className="w-full mb-8"
+            value={registr.alias}
+            onChange={(event) => {
+              console.log(event.target.value);
+              setRegistr((state) => ({
+                ...state,
+                alias: event.target.value,
               }));
             }}
           />
