@@ -1,8 +1,8 @@
 import { Button } from "ui/buttons/button";
 import iconos_styles from "../../ui/iconos/iconos_styles";
-import "./detalle.scss";
+import "./detalle-venta.scss";
 
-export function Detalle() {
+export function DetalleVenta() {
   return (
     <div className="detalle_1 max-w-screen-xl mx-auto my-10">
       <section>

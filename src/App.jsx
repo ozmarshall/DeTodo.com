@@ -12,7 +12,8 @@ import { Footer } from "./componentes/footer/footer";
 import { PagePrincipal } from "./paginas/pagina-principal";
 import { MiPerfil } from "./paginas/mi-perfil/mi-perfil";
 import { VendeAqui } from "./paginas/vende_aqui/vende-aqui";
-import { Detalle } from "./paginas/detalle/detalle";
+import { DetalleVenta } from "./paginas/detalle-venta/detalle-venta";
+import { DetalleCompra} from "./paginas/detalle-compra/detalle-compra";
 import { Login } from "./paginas/login";
 import { Registrate } from "./paginas/registrate/registrate";
 import { Contactanos } from "./paginas/contactanos/contactanos";
@@ -38,8 +39,11 @@ export function App() {
             <Route path="/vende-aqui">
               <VendeAqui />
             </Route>
-            <Route path="/detalle">
-              <Detalle />
+            <Route path="/detalle-venta">
+              <DetalleVenta />
+            </Route>
+            <Route path="/detalle-compra/:id">
+              <DetalleCompra />
             </Route>
             <Route path="/login">
               <Login />

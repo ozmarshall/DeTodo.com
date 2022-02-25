@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { CardProduct } from "componentes/card-product/card-product";
+import { CardProduct } from "componentes/card-product-venta/card-product-venta";
 
 export function PagePrincipal() {
   //codigo para poder subir a la pagina principal no desde el servidor
@@ -59,6 +59,7 @@ export function PagePrincipal() {
             image={product.image}
             price={product.price}
             title={product.tittle}
+            id={product.id}
           />
         ))}
       </div>

@@ -3,21 +3,14 @@ import {
   HeartFilled,
   MailOutlined,
 } from "@ant-design/icons";
-import { useHistory } from "react-router-dom";
 
-import "./card-product.scss";
+import { Link } from "react-router-dom";
+import "./card-product-venta.scss";
 
 export function CardProduct(props) {
-  let history = useHistory();
-  const { image, price, title, brand } = props;
+  const { image, price, title, brand, id } = props;
   return (
-    <a
-      href="#"
-      className=""
-      onClick={() => {
-        history.push("/detalle/");
-      }}
-    >
+    <Link to={`detalle-compra/${id}`}>
       <article className="card-product relative cursor-pointer text-black border border-solid rounded-xl border-gray-400 hover:shadow-xl">
         <HeartFilled
           className="text-2xl -mt-2 card-product__heart"
@@ -43,6 +36,6 @@ export function CardProduct(props) {
           </ul>
         </div>
       </article>
-    </a>
+    </Link>
   );
 }

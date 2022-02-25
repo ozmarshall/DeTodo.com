@@ -14,6 +14,13 @@ export function VendeAqui() {
     image: "",
     price: "",
     tittle: "",
+    description: "",
+    stateS: "",
+    stateRanking: "",
+    numberItem: "",
+    paymentMeth: "",
+    deliveryPoint: "",
+    receptionN: ""
   });
 
   function saveContato() {
@@ -21,7 +28,7 @@ export function VendeAqui() {
       .post("https://61ef3d66d593d20017dbb3ad.mockapi.io/articulos", form)
       .then(() => {
         alert("la informacion se guardo correctamente");
-        history.push("/detalle");
+        history.push("/");
       })
       .catch(() => {
         alert("la informacion no se guardo correctamente, intentalo otra vez");
@@ -38,7 +45,6 @@ export function VendeAqui() {
         }}
       >
         <div className="imagenes_venta grid gap-x-8 gap-y-4 grid-cols-3 pb-20">
-          
           <Uploadimage
             className="labelL w-48 h-48"
             value={form.image}
@@ -90,37 +96,83 @@ export function VendeAqui() {
         </div>
         <div className="detalles_venta gap-x-8">
           <div className="area_text resize-none outline-none">
-            <AreaText rows="10">Describe tu Producto ..</AreaText>
+            <AreaText
+              rows="10"
+              value={form.description}
+              onChange={(event) => {
+                console.log(event.target.value);
+                setForm((state) => ({
+                  ...state,
+                  description: event.target.value,
+                }));
+              }}
+            >
+              Describe tu Producto ..
+            </AreaText>
           </div>
           <Input
             type="text"
             placeholder="Nuevo o Usado?"
             className="w-full mb-8"
+            value={form.stateS}
+            onChange={(event) => {
+              console.log(event.target.value);
+              setForm((state) => ({ ...state, stateS: event.target.value }));
+            }}
           />
           <Input
             type="number"
             placeholder="Estado 1/10"
             className="w-full mb-8"
+            value={form.stateRanking}
+            onChange={(event) => {
+              console.log(event.target.value);
+              setForm((state) => ({
+                ...state,
+                stateRanking: event.target.value,
+              }));
+            }}
           />
           <Input
             type="number"
             placeholder="Cantidad de articulos"
             className="w-full mb-8"
+            value={form.numberItem}
+            onChange={(event) => {
+              console.log(event.target.value);
+              setForm((state) => ({ ...state, numberItem: event.target.value }));
+            }}
           />
           <Input
             type="text"
             placeholder="Metodo de Pago"
             className="w-full mb-8"
+            value={form.paymentMeth}
+            onChange={(event) => {
+              console.log(event.target.value);
+              setForm((state) => ({ ...state, paymentMeth: event.target.value }));
+            }}
           />
           <Input
             type="text"
             placeholder="Punto de Entrega"
             className="w-full mb-8"
+            value={form.deliveryPoint}
+            onChange={(event) => {
+              console.log(event.target.value);
+              setForm((state) => ({ ...state, deliveryPoint: event.target.value }));
+            }}
           />
           <Input
             type="text"
             placeholder="Punto de Recepcion"
             className="w-full mb-8"
+            value={form.receptionN}
+            onChange={(event) => {
+              console.log(event.target.value);
+              setForm((state) => ({ ...state, receptionN: event.target.value }));
+            }}
+            
           />
 
           <div className="col-span-2">
