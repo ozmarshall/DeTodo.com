@@ -1,7 +1,29 @@
 import iconos_styles from "../../ui/iconos/iconos_styles";
 import { Button } from "ui/buttons/button";
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { CardMisAnuncios } from "../../componentes/card-detalle-mis_anuncios/card-detalle-mis_anuncios";
 import "./mi-perfil.scss";
+
 export function MiPerfil() {
+  const params = useParams();
+  const [product, setProduct] = useState({});
+
+  function getDetalleMisAnuncios(id) {
+    axios
+      .get(`https://61ef3d66d593d20017dbb3ad.mockapi.io/articulos/${id}`)
+      .then((product) => {
+        setProduct(product.data);
+      })
+      .catch((error) => {
+        alert("no se pudo hacer la consulta");
+      });
+  }
+  useEffect(() => {
+    getDetalleMisAnuncios(params.id);
+  }, []);
+
   return (
     <div className="pagina_mi_perfil max-w-screen-xl mx-auto my-10">
       <section className="detalle_perfil">
@@ -41,35 +63,7 @@ export function MiPerfil() {
         </div>
         <section className="mis-anuncios my-10">
           <h2>MIS ANUNCIOS</h2>
-          <div className="contenedor-clasificado">
-            <div className="bloque-anuncios py-10  px-10">
-              <div className="descricion-articulo">
-                <img
-                  className="w-40 h-40"
-                  src="https://www.clikisalud.net/wp-content/uploads/2016/03/comida-r%C3%A1pida.jpg"
-                  alt=""
-                />
-                <p className="pl-5">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Maiores rem eum sequi cupiditate, nisi saepe unde inventore
-                  corporis quas fuga veniam, architecto quidem nam quisquam
-                  provident eius eligendi sapiente? Autem? Lorem, ipsum dolor
-                  sit amet consectetur adipisicing elit. Excepturi adipisci
-                  optio voluptatibus laboriosam deleniti commodi harum soluta
-                  sed perferendis nobis minus sit iusto, eos, sapiente
-                  accusantium ex itaque aliquid eum!
-                </p>
-              </div>
-            </div>
-            <div className="button_modificar_guardar py-10 flex-col">
-              <div className="py-5 px-5">
-                <Button>Eliminar</Button>
-              </div>
-              <div className="py-5 px-5">
-                <Button>Modificar</Button>
-              </div>
-            </div>
-          </div>
+
           <div className="contenedor-clasificado">
             <div className="bloque-anuncios py-10 my-10 px-10">
               <div className="descricion-articulo">
@@ -99,6 +93,20 @@ export function MiPerfil() {
               </div>
             </div>
           </div>
+
+          <CardMisAnuncios
+            image={product.image}
+            //price={product.price}
+            //title={product.tittle}
+            description={product.description}
+            //stateS={product.stateS}
+            //stateRanking={product.stateRanking}
+            //numberItem={product.numberItem}
+            //paymentMeth={product.paymentMeth}
+            //deliveryPoint={product.deliveryPoint}
+            //receptionN={product.receptionN}
+            //id={product.id}
+          />
         </section>
       </section>
       <section className="grid gap-y-4 mx-auto">

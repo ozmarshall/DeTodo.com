@@ -38,6 +38,7 @@ export function DetalleCompra() {
             paymentMeth={product.paymentMeth}
             deliveryPoint={product.deliveryPoint}
             receptionN={product.receptionN}
+            phoneNumber={product.phoneNumber}
             id={product.id}
           />
       </section>

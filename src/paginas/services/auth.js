@@ -1,5 +1,5 @@
 import { api } from "paginas/services/api";
 
 export function getLoginServices() {
-  return api.get("/usuarios");
+  return api.get("/registrados");
 }

@@ -19,7 +19,7 @@ export function CardProduct(props) {
         <img className="mx-auto" src={image} alt={title} />
         <div className="card-product__text p-4">
           <ul className="card-product__cart flex items-center justify-between mb-4">
-            <li>{price}</li>
+            <li className="font-bold">S/ {price}</li>
             <li>
               <ShoppingCartOutlined className="text-2xl -mt-2" />
             </li>

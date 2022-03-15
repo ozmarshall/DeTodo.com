@@ -44,10 +44,10 @@ export function Footer() {
       </section>
       <section className="footer_2 p-8 text-slate-100" >
         <h2>
-          Compra y vende en<a href="" onClick={() => {history.push("/pagina-principal");}}> deTodo.com</a> y disfruta
+          Compra y vende en<a href="" onClick={() => {history.push("/pagina-principal");}}> DeTodo.com</a> y disfruta
         </h2>
         <p>
-          Avisos Clasificados. @ 2010-2022 <a href="" onClick={() => {history.push("/pagina-principal");}}>deTodo.com</a>{" "}
+          Avisos Clasificados. @ 2010-2022 <a href="" onClick={() => {history.push("/pagina-principal");}}>DeTodo.com</a>{" "}
         </p>
       </section>
     </footer>

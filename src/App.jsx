@@ -39,12 +39,16 @@ export function App() {
               <Route path="/mi-perfil">
                 <MiPerfil />
               </Route>
+              <Route path="/mi-perfil/:id">
+                <MiPerfil />
+              </Route>
               <Route path="/vende-aqui">
                 <VendeAqui />
               </Route>
               <Route path="/detalle-venta">
                 <DetalleVenta />
               </Route>
+              
               <Route path="/detalle-compra/:id">
                 <DetalleCompra />
               </Route>

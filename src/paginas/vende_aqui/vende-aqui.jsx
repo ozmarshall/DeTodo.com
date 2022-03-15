@@ -20,7 +20,9 @@ export function VendeAqui() {
     numberItem: "",
     paymentMeth: "",
     deliveryPoint: "",
-    receptionN: ""
+    receptionN: "",
+    phoneNumber: "",
+    typeCurrency: "",
   });
 
   function saveContato() {
@@ -45,6 +47,16 @@ export function VendeAqui() {
         }}
       >
         <div className="imagenes_venta grid gap-x-8 gap-y-4 grid-cols-3 pb-20">
+          <Input
+            type="text"
+            placeholder="Copia Url de imagen"
+            className="border-dashed border-4 border-black w-3/5 rounded-3xl "
+            value={form.image}
+            onChange={(event) => {
+              console.log(event.target.value);
+              setForm((state) => ({ ...state, image: event.target.value }));
+            }}
+          />
           <Uploadimage
             className="labelL w-48 h-48"
             value={form.image}
@@ -55,7 +67,6 @@ export function VendeAqui() {
               setForm((state) => ({ ...state, image: event.target.value }));
             }}
           ></Uploadimage>
-          <Uploadimage className="labelL w-48 h-48"></Uploadimage>
           <Uploadimage className="labelL w-48 h-48"></Uploadimage>
           <Uploadimage className="labelL w-48 h-48"></Uploadimage>
           <Uploadimage className="labelL w-48 h-48"></Uploadimage>
@@ -140,7 +151,10 @@ export function VendeAqui() {
             value={form.numberItem}
             onChange={(event) => {
               console.log(event.target.value);
-              setForm((state) => ({ ...state, numberItem: event.target.value }));
+              setForm((state) => ({
+                ...state,
+                numberItem: event.target.value,
+              }));
             }}
           />
           <Input
@@ -150,31 +164,51 @@ export function VendeAqui() {
             value={form.paymentMeth}
             onChange={(event) => {
               console.log(event.target.value);
-              setForm((state) => ({ ...state, paymentMeth: event.target.value }));
+              setForm((state) => ({
+                ...state,
+                paymentMeth: event.target.value,
+              }));
             }}
           />
           <Input
             type="text"
-            placeholder="Punto de Entrega"
+            placeholder="Punto de Entrega (Dirección)"
             className="w-full mb-8"
             value={form.deliveryPoint}
             onChange={(event) => {
               console.log(event.target.value);
-              setForm((state) => ({ ...state, deliveryPoint: event.target.value }));
+              setForm((state) => ({
+                ...state,
+                deliveryPoint: event.target.value,
+              }));
             }}
           />
           <Input
             type="text"
-            placeholder="Punto de Recepcion"
+            placeholder="Punto de Recepcion (Dirección)"
             className="w-full mb-8"
             value={form.receptionN}
             onChange={(event) => {
               console.log(event.target.value);
-              setForm((state) => ({ ...state, receptionN: event.target.value }));
+              setForm((state) => ({
+                ...state,
+                receptionN: event.target.value,
+              }));
             }}
-            
           />
-
+          <Input
+            type="number"
+            placeholder="Ingresa tu nro de celular"
+            className="w-full mb-8"
+            value={form.phoneNumber}
+            onChange={(event) => {
+              console.log(event.target.value);
+              setForm((state) => ({
+                ...state,
+                phoneNumber: event.target.value,
+              }));
+            }}
+          />
           <div className="col-span-2">
             <Button>Ultimo Paso</Button>
           </div>

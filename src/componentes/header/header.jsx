@@ -9,7 +9,7 @@ export function Header() {
   return (
     <header className="headerH text-white">
       <h1>
-        <NavLink to="/pagina-principal" activeClassName="is-active">deTodo.com</NavLink>
+        <NavLink to="/pagina-principal" activeClassName="is-active">DeTodo.com</NavLink>
       </h1>
       <Input
         placeholder="Autos, Accesorios, restaurantes y mucho más..."

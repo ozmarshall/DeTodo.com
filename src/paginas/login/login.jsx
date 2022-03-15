@@ -32,9 +32,9 @@ export function LoginL() {
 
   async function onSubmit(evt) {
     evt.preventDefault();
-    const usuarios = await LoginL();
-    const response = userExist(formLogin, usuarios)?.response;
-    const isLogin = userExist(formLogin, usuarios)?.response;
+    const registrados = await LoginL();
+    const response = userExist(formLogin, registrados)?.response;
+    const isLogin = userExist(formLogin, registrados)?.response;
 
     if (isLogin) {
       dispatch({
@@ -97,6 +97,7 @@ export function LoginL() {
         >
           Ingresar
         </Button>
+        <p className="py-8">Quieres comprar o vender de forma gratuita? Entonces Registrate es GRATIS!!</p>
       </form>
     </div>
   );

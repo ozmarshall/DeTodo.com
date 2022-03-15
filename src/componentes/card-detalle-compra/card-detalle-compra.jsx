@@ -17,6 +17,7 @@ export function CardDetalleCompra(props) {
     deliveryPoint,
     receptionN,
     id,
+    phoneNumber,
   } = props;
 
   return (
@@ -34,15 +35,16 @@ export function CardDetalleCompra(props) {
         <div>
           <p className="id_anuncio py-5"> ID DEL ANUNCIO : XWT2THJ7{id}</p>
           <p className="id_precio text-green-500 py-8 text-9xl">S/ {price}</p>
-          <p>{title}</p>
-          <p>{description}</p>
+          <p>Titulo del Articulo : {title}</p>
+          <p>Descripción del Articulo : {description}</p>
           <div className="detalle_5">
-            <p>{stateS}</p>
-            <p>{stateRanking}</p>
-            <p>{numberItem}</p>
-            <p>{paymentMeth}</p>
-            <p>{deliveryPoint}</p>
-            <p>{receptionN}</p>
+            <p>Estado : {stateS}</p>
+            <p>Estado ranking : {stateRanking}</p>
+            <p>Cantidad : {numberItem}</p>
+            <p>Metodo de pago : {paymentMeth}</p>
+            <p>Punto de Entrega : {deliveryPoint}</p>
+            <p>Punto de Recepción : {receptionN}</p>
+            <p>Nro de contacto : {phoneNumber}</p>
             <Button>COMPRAR !</Button>
           </div>
         </div>
