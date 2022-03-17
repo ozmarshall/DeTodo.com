@@ -23,6 +23,7 @@ export function VendeAqui() {
     receptionN: "",
     phoneNumber: "",
     typeCurrency: "",
+    contact: ""
   });
 
   function saveContato() {
@@ -206,6 +207,19 @@ export function VendeAqui() {
               setForm((state) => ({
                 ...state,
                 phoneNumber: event.target.value,
+              }));
+            }}
+          />
+            <Input
+            type="text"
+            placeholder="Contacto"
+            className="w-full mb-8"
+            value={form.contact}
+            onChange={(event) => {
+              console.log(event.target.value);
+              setForm((state) => ({
+                ...state,
+                contact: event.target.value,
               }));
             }}
           />

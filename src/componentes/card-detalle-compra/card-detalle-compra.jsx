@@ -18,6 +18,7 @@ export function CardDetalleCompra(props) {
     receptionN,
     id,
     phoneNumber,
+    contact
   } = props;
 
   return (
@@ -45,6 +46,7 @@ export function CardDetalleCompra(props) {
             <p>Punto de Entrega : {deliveryPoint}</p>
             <p>Punto de Recepción : {receptionN}</p>
             <p>Nro de contacto : {phoneNumber}</p>
+            <p>Contacto : {contact}</p>
             <Button>COMPRAR !</Button>
           </div>
         </div>

@@ -39,6 +39,7 @@ export function DetalleCompra() {
             deliveryPoint={product.deliveryPoint}
             receptionN={product.receptionN}
             phoneNumber={product.phoneNumber}
+            contact={product.contact}
             id={product.id}
           />
       </section>
