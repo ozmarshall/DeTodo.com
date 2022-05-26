@@ -31,7 +31,7 @@ export function PagePrincipal() {
 
   function getProducts() {
     axios
-      .get("https://61ef3d66d593d20017dbb3ad.mockapi.io/articulos")
+      .get("http://127.0.0.1:8000/catalogo/articulo/")
       .then((respuesta) => {
         console.log("respuesta", respuesta.data);
         setArticulos(respuesta.data);
