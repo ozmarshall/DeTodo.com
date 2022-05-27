@@ -7,41 +7,42 @@ import { CardDetalleCompra } from "../../componentes/card-detalle-compra/card-de
 import "./detalle-compra.scss";
 
 export function DetalleCompra() {
-  const params= useParams();
-  const [product, setProduct]= useState({})
+  const params = useParams();
+  const [product, setProduct] = useState({});
+  // const [url, setUrl]
 
-  function getDetalleCompra (id){
-    axios.get(`https://61ef3d66d593d20017dbb3ad.mockapi.io/articulos/${id}`)
-    .then((product)=>{
-      setProduct(product.data)
-
-    }).catch((error)=>{
-      alert("no se pudo hacer la consulta")
-    })
-
+  function getDetalleCompra(id) {
+    axios
+      .get(`http://127.0.0.1:8000/catalogo/articulo/${id}`)
+      .then((product) => {
+        setProduct(product.data);
+      })
+      .catch((error) => {
+        alert("no se pudo hacer la consulta");
+      });
   }
-  useEffect (()=>{
-    getDetalleCompra(params.id)
-  }, [])
-  
+  useEffect(() => {
+    getDetalleCompra(params.id);
+  }, []);
+
   return (
     <div className="detalle_1 max-w-screen-xl mx-auto my-10">
       <section>
         <CardDetalleCompra
-            image={product.image}
-            price={product.price}
-            title={product.tittle}
-            description={product.description}
-            stateS={product.stateS}
-            stateRanking={product.stateRanking}
-            numberItem={product.numberItem}
-            paymentMeth={product.paymentMeth}
-            deliveryPoint={product.deliveryPoint}
-            receptionN={product.receptionN}
-            phoneNumber={product.phoneNumber}
-            contact={product.contact}
-            id={product.id}
-          />
+          image={product.image}
+          price={product.price}
+          title={product.tittle}
+          description={product.description}
+          stateS={product.stateS}
+          stateRanking={product.stateRanking}
+          numberItem={product.numberItem}
+          paymentMeth={product.paymentMeth}
+          deliveryPoint={product.deliveryPoint}
+          receptionN={product.receptionN}
+          phoneNumber={product.phoneNumber}
+          contact={product.contact}
+          id={product.id}
+        />
       </section>
       <section className="grid gap-y-4 mx-auto">
         <div className="w-48 h-64">

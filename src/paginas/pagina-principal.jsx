@@ -54,14 +54,16 @@ export function PagePrincipal() {
         </span>
       </h1>
       <div className="grid grid-cols-4 gap-8 w-5/6 mx-auto">
-        {articulos.map((product) => (
-          <CardProduct
-            image={product.image}
-            price={product.price}
-            title={product.tittle}
-            id={product.id}
-          />
-        ))}
+        {articulos.length > 0 &&
+          articulos.map((product) => (
+            <CardProduct
+              image={product.image}
+              price={product.price}
+              title={product.tittle}
+              id={product.id}
+              key={product.id}
+            />
+          ))}
       </div>
     </div>
   );
