@@ -12,30 +12,54 @@ export function VendeAqui() {
   let history = useHistory();
   const [form, setForm] = useState({
     image: "",
-    price: "",
+    price: 0.0,
     tittle: "",
     description: "",
     stateS: "",
-    stateRanking: "",
+    stateRanking: 0,
     numberItem: "",
     paymentMeth: "",
     deliveryPoint: "",
     receptionN: "",
     phoneNumber: "",
-    typeCurrency: "",
-    contact: ""
+    contac: ""
   });
+  console.log(form)
 
-  function saveContato() {
+
+  function saveContato(image) {
+    let formData=new FormData()
+    formData.append('picture', image)
+
+
     axios
-      .post("https://61ef3d66d593d20017dbb3ad.mockapi.io/articulos", form)
-      .then(() => {
-        alert("la informacion se guardo correctamente");
-        history.push("/");
+      .post("http://127.0.0.1:8000/catalogo/articulo/upload", formData)
+      .then((response) => {
+        setForm({...form, image:response.data.url} )
+        console.log(response)
+       
+        //alert("la informacion se guardo correctamente");
+        //history.push("/");
       })
       .catch(() => {
         alert("la informacion no se guardo correctamente, intentalo otra vez");
       });
+  }
+
+  function postArticulo(){
+    axios
+      .post("http://127.0.0.1:8000/catalogo/articulo/", form)
+      .then((response) => {
+        console.log(response)
+        
+        alert("la informacion se guardo correctamente");
+        history.push("/");
+     
+      })
+      .catch(() => {
+        alert("la informacion no se guardo correctamente, intentalo otra vez");
+      });
+
   }
 
   return (
@@ -43,12 +67,12 @@ export function VendeAqui() {
       <form
         onSubmit={(event) => {
           event.preventDefault();
-          saveContato();
+          postArticulo();
           //console.log("Esto se enviara al backend", form)
         }}
       >
         <div className="imagenes_venta grid gap-x-8 gap-y-4 grid-cols-3 pb-20">
-          <Input
+          {/* <Input
             type="text"
             placeholder="Copia Url de imagen"
             className="border-dashed border-4 border-black w-3/5 rounded-3xl "
@@ -57,17 +81,15 @@ export function VendeAqui() {
               console.log(event.target.value);
               setForm((state) => ({ ...state, image: event.target.value }));
             }}
-          />
+          /> */}
           <Uploadimage
             className="labelL w-48 h-48"
             value={form.image}
             onChange={(event) => {
-              //console.log(event.target.value);
-              //const copyObjet={...form, image: event.target.value}
-              //console.log("copyObjet", copyObjet)
-              setForm((state) => ({ ...state, image: event.target.value }));
+              saveContato(event.target.files[0]);
             }}
           ></Uploadimage>
+          <Uploadimage className="labelL w-48 h-48"></Uploadimage>
           <Uploadimage className="labelL w-48 h-48"></Uploadimage>
           <Uploadimage className="labelL w-48 h-48"></Uploadimage>
           <Uploadimage className="labelL w-48 h-48"></Uploadimage>
@@ -82,8 +104,8 @@ export function VendeAqui() {
               className="w-full mb-8"
               value={form.price}
               onChange={(event) => {
-                console.log(event.target.value);
-                setForm((state) => ({ ...state, price: event.target.value }));
+                
+                setForm((state) => ({ ...state, price: parseFloat(event.target.value) }));
               }}
             />
             <Input
@@ -112,7 +134,7 @@ export function VendeAqui() {
               rows="10"
               value={form.description}
               onChange={(event) => {
-                console.log(event.target.value);
+                console.log(event);
                 setForm((state) => ({
                   ...state,
                   description: event.target.value,
@@ -141,7 +163,7 @@ export function VendeAqui() {
               console.log(event.target.value);
               setForm((state) => ({
                 ...state,
-                stateRanking: event.target.value,
+                stateRanking: parseInt(event.target.value),
               }));
             }}
           />
@@ -160,14 +182,14 @@ export function VendeAqui() {
           />
           <Input
             type="text"
-            placeholder="Metodo de Pago"
+            placeholder="contacto"
             className="w-full mb-8"
-            value={form.paymentMeth}
+            value={form.contac}
             onChange={(event) => {
               console.log(event.target.value);
               setForm((state) => ({
                 ...state,
-                paymentMeth: event.target.value,
+                contac: event.target.value,
               }));
             }}
           />
@@ -212,14 +234,14 @@ export function VendeAqui() {
           />
             <Input
             type="text"
-            placeholder="Contacto"
+            placeholder="Metodo de pago"
             className="w-full mb-8"
-            value={form.contact}
+            value={form.paymentMeth}
             onChange={(event) => {
               console.log(event.target.value);
               setForm((state) => ({
                 ...state,
-                contact: event.target.value,
+                paymentMeth: event.target.value,
               }));
             }}
           />

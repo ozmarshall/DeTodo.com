@@ -13,8 +13,8 @@ export function Registrate() {
     image: "",
     name: "",
     lastName: "",
+    alias: "",
     phone: "",
-    lastName: "",
     document: "",
     email: "",
     password: "",
@@ -24,7 +24,7 @@ export function Registrate() {
 
   function saveRegistered() {
     axios
-      .post("https://61ef3d66d593d20017dbb3ad.mockapi.io/registrados", registr)
+      .post("http://127.0.0.1:8000/usuarios/usuario/", registr)
       .then(() => {
         alert("la informacion se guardo correctamente");
         history.push("/login");
