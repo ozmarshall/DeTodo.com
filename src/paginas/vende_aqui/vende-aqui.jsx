@@ -39,7 +39,7 @@ export function VendeAqui() {
         console.log(response)
        
         //alert("la informacion se guardo correctamente");
-        //history.push("/");
+        
       })
       .catch(() => {
         alert("la informacion no se guardo correctamente, intentalo otra vez");
@@ -89,11 +89,11 @@ export function VendeAqui() {
               saveContato(event.target.files[0]);
             }}
           ></Uploadimage>
-          <Uploadimage className="labelL w-48 h-48"></Uploadimage>
-          <Uploadimage className="labelL w-48 h-48"></Uploadimage>
-          <Uploadimage className="labelL w-48 h-48"></Uploadimage>
-          <Uploadimage className="labelL w-48 h-48"></Uploadimage>
-          <Uploadimage className="labelL w-48 h-48"></Uploadimage>
+          <Uploadimage className="labelL2 w-48 h-48"></Uploadimage>
+          <Uploadimage className="labelL2 w-48 h-48"></Uploadimage>
+          <Uploadimage className="labelL2 w-48 h-48"></Uploadimage>
+          <Uploadimage className="labelL2 w-48 h-48"></Uploadimage>
+          <Uploadimage className="labelL2 w-48 h-48"></Uploadimage>
         </div>
         <div className="Titulo_Venta grid gap-x-8 gap-y-4 grid-cols-2 items-center">
           <div>

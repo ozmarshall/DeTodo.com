@@ -13,9 +13,11 @@ export function Header() {
       </h1>
       <Input
         placeholder="Autos, Accesorios, restaurantes y mucho más..."
-        className="w-2/5"
+        className="buscador w-2/5"
       />
       <Nav />
     </header>
+    
+    
   );
 }

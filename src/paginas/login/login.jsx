@@ -5,68 +5,52 @@ import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { getLoginServices } from "paginas/services/auth";
+import axios from "axios"
 
 export function LoginL() {
+  let history = useHistory();
   const [formLogin, setFormLogin] = useState({
-    user: "",
+    username: "",
     password: "",
-    confirmpassword: "",
+   
   });
 
-  const dispatch = useDispatch();
-  const history = useHistory();
-
-  function userExist(user, users) {
-    return users.filter((dataUser) => dataUser.user === user.user)[0];
-  }
-
-  async function LoginL() {
-    try {
-      const { data } = await getLoginServices();
-
-      return data;
-    } catch (e) {
-      console.log("error!!!!");
-    }
-  }
-
-  async function onSubmit(evt) {
-    evt.preventDefault();
-    const registrados = await LoginL();
-    const response = userExist(formLogin, registrados)?.response;
-    const isLogin = userExist(formLogin, registrados)?.response;
-
-    if (isLogin) {
-      dispatch({
-        type: "SET_IS_LOGIN",
-        payload: true,
+  function getUsers() {
+    axios
+      .post("http://127.0.0.1:8000/usuarios/login/", formLogin)
+      .then((respuesta) => {
+        console.log(respuesta)
+        
+        if (respuesta.status===200){
+          history.push("/vende-aqui")
+        }
+        
+      })
+      .catch((e) => {
+        console.log(e);
       });
-      dispatch({
-        type: "SET_USER",
-        payload: response.data,
-      });
-      history.push("/pagina-principal");
-    } else {
-      dispatch({
-        type: "SET_IS_LOGIN",
-        payload: false,
-      });
-    }
   }
+  console.log(formLogin)
+
+
 
   return (
     <div className="page-login text-center">
       <h1 className="mb-8 text-slate-400">LOGIN</h1>
       <form
         className="w-80 mx-auto text-center"
-        onSubmit={onSubmit}
+        onSubmit={(event) => {
+          event.preventDefault();
+          getUsers();
+          //console.log("Esto se enviara al backend", form)
+        }}
       >
         <Input
           placeholder="Usuario / alias"
           className="w-full mb-8"
-          value={formLogin.user}
+          value={formLogin.username}
           onChange={(evt) =>
-            setFormLogin((state) => ({ ...state, user: evt.target.value }))
+            setFormLogin((state) => ({ ...state, username: evt.target.value }))
           }
         />
         <Input
@@ -78,15 +62,7 @@ export function LoginL() {
             setFormLogin((state) => ({ ...state, password: evt.target.value }))
           }
         />
-        <Input
-          type="password"
-          placeholder="Comfirme Password"
-          className="w-full mb-8"
-          value={formLogin.confirmpassword}
-          onChange={(evt) =>
-            setFormLogin((state) => ({ ...state, confirmpassword: evt.target.value }))
-          }
-        />
+        
         <Button
           // htmlType="submit"
           //type="primary"

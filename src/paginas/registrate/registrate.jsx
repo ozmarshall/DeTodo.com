@@ -10,22 +10,31 @@ import "./registrate.scss";
 export function Registrate() {
   let history = useHistory();
   const [registr, setRegistr] = useState({
-    image: "",
-    name: "",
-    lastName: "",
-    alias: "",
-    phone: "",
-    document: "",
     email: "",
     password: "",
-    confirmpassword: "",
-    description: "",
+    last_login: "2022-05-28T18:09:20.784Z",
+    is_superuser: false,
+    username: "",
+    first_name: "",
+    last_name: "",
+    is_staff: false,
+    is_active: true,
+    date_joined: "2022-05-28T18:09:20.784Z",
+    groups: [],
+    user_permissions: [],
+    //image: "",
+    //phone: "",
+    //document: "",
+    //confirmpassword: "",
+    //description: "",
   });
 
   function saveRegistered() {
     axios
-      .post("http://127.0.0.1:8000/usuarios/usuario/", registr)
-      .then(() => {
+      .post("http://127.0.0.1:8000/usuarios/register/", registr)
+      .then((response) => {
+        console.log(response)
+        
         alert("la informacion se guardo correctamente");
         history.push("/login");
       })
@@ -45,82 +54,83 @@ export function Registrate() {
           //console.log("Esto se enviara al backend", form)
         }}
       >
+        
         <div>
           <Uploadimage
             className="label_registrate w-80 h-80 "
-            value={registr.image}
-            onChange={(event) => {
-              console.log(event.target.value);
-              setRegistr((state) => ({ ...state, image: event.target.value }));
-            }}
+            // value={registr.image}
+            // onChange={(event) => {
+            //   console.log(event.target.value);
+            //   setRegistr((state) => ({ ...state, image: event.target.value }));
+            // }}
           ></Uploadimage>
         </div>
         <div>
           <Input
-            placeholder="Nombre"
+            placeholder="Nombre obligatorio"
             className="w-full mb-8"
-            value={registr.name}
+            value={registr.first_name}
             onChange={(event) => {
               console.log(event.target.value);
               setRegistr((state) => ({
                 ...state,
-                name: event.target.value,
+                first_name: event.target.value,
               }));
             }}
           />
           <Input
-            placeholder="Apellido"
+            placeholder="Apellido obligatorio"
             className="w-full mb-8"
-            value={registr.lastName}
+            value={registr.last_name}
             onChange={(event) => {
               console.log(event.target.value);
               setRegistr((state) => ({
                 ...state,
-                lastName: event.target.value,
+                last_name: event.target.value,
               }));
             }}
           />
             <Input
-            placeholder="Escoja un Nombre de Usuario o alias"
+            placeholder="Escoja un Nombre de Usuario o alias...obligatorio"
             className="w-full mb-8"
-            value={registr.alias}
+            value={registr.username}
             onChange={(event) => {
               console.log(event.target.value);
               setRegistr((state) => ({
                 ...state,
-                alias: event.target.value,
+                username: event.target.value,
               }));
             }}
           />
-          <Input
+          {/* <Input
             type="number"
             placeholder="Telefono"
             className="w-full mb-8"
-            value={registr.phone}
-            onChange={(event) => {
-              console.log(event.target.value);
-              setRegistr((state) => ({
-                ...state,
-                phone: event.target.value,
-              }));
-            }}
-          />
-          <Input
+            // value={registr.phone}
+            // onChange={(event) => {
+            //   console.log(event.target.value);
+            //   setRegistr((state) => ({
+            //     ...state,
+            //     phone: event.target.value,
+            //   }));
+            // }}
+          /> */}
+          {/* <Input
             type="number"
             placeholder="Documento de Identidad"
             className="w-full mb-8"
-            value={registr.document}
-            onChange={(event) => {
-              console.log(event.target.value);
-              setRegistr((state) => ({
-                ...state,
-                document: event.target.value,
-              }));
-            }}
-          />
+            // value={registr.document}
+            // onChange={(event) => {
+            //   console.log(event.target.value);
+            //   setRegistr((state) => ({
+            //     ...state,
+            //     document: event.target.value,
+            //   }));
+            // }}
+          /> */}
           <Input
             type="email"
-            placeholder="E-mail"
+            placeholder="E-mail obligatorio"
             className="w-full mb-8"
             value={registr.email}
             onChange={(event) => {
@@ -133,7 +143,7 @@ export function Registrate() {
           />
           <Input
             type="password"
-            placeholder="Password"
+            placeholder="Password obligatorio"
             className="w-full mb-8"
             value={registr.password}
             onChange={(event) => {
@@ -144,31 +154,31 @@ export function Registrate() {
               }));
             }}
           />
-          <Input
+          {/* <Input
             type="password"
             placeholder="Confirme Password"
             className="w-full mb-8"
-            value={registr.confirmpassword}
-            onChange={(event) => {
-              console.log(event.target.value);
-              setRegistr((state) => ({
-                ...state,
-                confirmpassword: event.target.value,
-              }));
-            }}
-          />
+            // value={registr.confirmpassword}
+            // onChange={(event) => {
+            //   console.log(event.target.value);
+            //   setRegistr((state) => ({
+            //     ...state,
+            //     confirmpassword: event.target.value,
+            //   }));
+            // }}
+          /> */}
         </div>
         <div className="area_texto resize-none outline-none ">
           <AreaText
             rows="10"
-            value={registr.description}
-            onChange={(event) => {
-              console.log(event.target.value);
-              setRegistr((state) => ({
-                ...state,
-                description: event.target.value,
-              }));
-            }}
+            // value={registr.description}
+            // onChange={(event) => {
+            //   console.log(event.target.value);
+            //   setRegistr((state) => ({
+            //     ...state,
+            //     description: event.target.value,
+            //   }));
+            // }}
           >
             Cuentanos sobre ti ..
           </AreaText>

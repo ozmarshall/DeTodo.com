@@ -8,6 +8,71 @@
  //@extend @apply p-8;
 }
 
+/*RESPONSIVE*/
+
+/*TABLET < 1300PX */
+@media (max-width: 1300px) {
+
+  .headerH {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  header h1 {
+   font-size: 30px;
+   padding-left: 10px;
+  }
+
+
+}
+
+
+/*TABLET < 960PX */
+@media (max-width: 960px) {
+
+  .headerH  {
+    display: inline;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 40px;
+    padding-bottom: 20px;
+  }
+
+  header .buscador {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  header nav {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+/*TABLET < 820PX */
+@media (max-width: 820px) {
+
+}
+
+/*TABLET < 680PX */
+@media (max-width: 680px) {
+
+}
+
+/*TABLET < 520PX */
+@media (max-width: 520px) {
+
+}
+
+/*TABLET < 380PX */
+@media (max-width: 380px) {
+
+}
+
 
 
 
